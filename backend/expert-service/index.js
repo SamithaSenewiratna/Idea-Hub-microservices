@@ -14,9 +14,9 @@ const ExpertRoute = require('./route/ReviewRoute');
 //---------------------------------------------------------
 
  try {
-    mongoose.connect('mongodb://127.0.0.1:27017/products-DB')
+    mongoose.connect('mongodb://127.0.0.1:27017/expert-DB')
         app.listen(serverPort,()=>{
-            console.log(`Server up & running on port ${serverPort}`);
+            console.log(` Server up & running on port ${serverPort}`);
         });
 
  } catch (error) {
@@ -24,7 +24,7 @@ const ExpertRoute = require('./route/ReviewRoute');
  }
 
  app.get('/test-api',(req,resp)=>{
-    return resp.json({'message':'server is running '})
+    return resp.json({'message':'expert server is running '})
  });
 
 
