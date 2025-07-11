@@ -7,7 +7,7 @@ const IdeaSchema = new mongoose.Schema({
   discription: { type: String },
   catogery: { type: String },
   images: [{ type: String }], // Max 5 images
-  createdDate: { type: Date }
+  createdDate: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('idea', IdeaSchema);
